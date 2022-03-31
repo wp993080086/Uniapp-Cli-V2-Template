@@ -1,7 +1,8 @@
 {
-	"name": "",
+	"name": "uniapp-cli-template",
 	"appid": "",
-	"description": "",
+	"author" : "wangpeng <993080086@qq.com>",
+	"description": "uniapp-cli-template",
 	"versionName": "1.0.0",
 	"versionCode": "100",
 	"transformPx": false,
@@ -54,9 +55,13 @@
 
 	},
 	"mp-weixin": { /* 微信小程序特有相关 */
-		"appid": "",
+		"appid": "wx676e009709c5610f",
 		"setting": {
-			"urlCheck": false
+			"urlCheck": false,
+			"postcss" : true,
+			"es6" : true,
+			"minified" : true,
+			"checkSiteMap" : false
 		},
 		"usingComponents": true
 	},

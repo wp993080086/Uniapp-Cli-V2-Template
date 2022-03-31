@@ -8,7 +8,8 @@ module.exports = {
     amd: true,
   },
   globals: {
-    getApp: true
+    getApp: true,
+    uni: true
   },
   extends: ['plugin:vue/vue3-essential', 'airbnb-base'],
   parserOptions: {

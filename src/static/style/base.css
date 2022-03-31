@@ -1,0 +1,25 @@
+/*****************************通用样式 ************************************/
+
+/* 单行文本省略号 */
+.omit {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/* 多行文本省略号 */
+.omit2 {
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break: break-all;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+
+/* 垂直水平对齐 */
+.flex_c {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
