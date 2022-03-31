@@ -36,8 +36,10 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped>
-.copy_content /deep/ .u-icon {
-  display: inline-block !important;
+<style lang="scss">
+.copy_content {
+  & ::v-deep .u-icon {
+    display: inline-block !important;
+  }
 }
 </style>

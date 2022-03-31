@@ -43,5 +43,8 @@ export default {
     line-height: 100rpx;
     text-align: center;
   }
+  // & ::v-deep .u-icon{
+  //   display: inline-block !important;
+  // }
 }
 </style>
