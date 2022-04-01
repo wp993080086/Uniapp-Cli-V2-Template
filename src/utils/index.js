@@ -8,10 +8,69 @@ export const sleep = (ms = 500) => {
   })
 }
 /**
+ * 获取设备信息
+ * @return  {Object} 设备信息
+ */
+export const getSystemInfo = () => {
+  return new Promise((resolve, reject) => {
+    uni.getSystemInfo({
+      success(res) {
+        resolve(res)
+      },
+      fail(error) {
+        reject(error)
+      }
+    })
+  })
+}
+/**
+ * 设置缓存
+ * @param  {String} keys key
+ * @param  {any} datas 缓存的数据
+ */
+export const setStorage = (keys, datas) => {
+  if (!keys) return Promise.reject(new Error('key不能为空 !'))
+  if (typeof keys !== 'string') return Promise.reject(new Error('key必须是String !'))
+  if (!datas) return Promise.reject(new Error('data不能为空 !'))
+  return new Promise((resolve, reject) => {
+    uni.setStorage({
+      key: keys,
+      data: datas,
+      success() {
+        resolve(true)
+      },
+      fail(error) {
+        reject(error)
+      }
+    })
+  })
+}
+/**
+ * 获取缓存
+ * @param  {String} keys key
+ */
+export const getStorage = (keys) => {
+  if (!keys) return Promise.reject(new Error('key不能为空 !'))
+  if (typeof keys !== 'string') return Promise.reject(new Error('key必须是String !'))
+  return new Promise((resolve, reject) => {
+    uni.getStorage({
+      key: keys,
+      success(res) {
+        console.log(res.data)
+        resolve(res.data)
+      },
+      fail(error) {
+        reject(error)
+      }
+    })
+  })
+}
+/**
  * 判断变量的类型
  * @param {object} value 变量值
+ * @return {String} 变量类型
  */
-function checkType(value) {
+export const checkType = (value) => {
   return Object.prototype.toString.call(value).slice(8, -1)
 }
 /**
@@ -125,7 +184,7 @@ export const debounce = (wait, fn, immediate = false) => {
   return debounced
 }
 /**
- * 压缩图片
+ * 压缩图片 页面需要写一个canvas标签，canvas-id='imgCanvas', 调用getCompressImage
  * @param {Object} file { path: '', size: '' }
  * @param {Number} limitSize 压缩目标 MB
  */

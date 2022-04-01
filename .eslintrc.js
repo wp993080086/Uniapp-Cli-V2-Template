@@ -9,7 +9,8 @@ module.exports = {
   },
   globals: {
     getApp: true,
-    uni: true
+    uni: true,
+    __wxConfig: true
   },
   extends: ['plugin:vue/vue3-essential', 'airbnb-base'],
   parserOptions: {

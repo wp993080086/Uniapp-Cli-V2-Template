@@ -1,15 +1,16 @@
 <template>
   <view class="copy_content" @click.stop="handleClipboard">
-    <text :style="{ fontSize: `${size}rpx`, marginRight: `${space}rpx` }">
+    <text :style="{ fontSize: `${size}rpx`, color: color, marginRight: `${space}rpx` }">
       {{ text || '-' }}
     </text>
-    <u-icon name="attach" :size="`${size}rpx`" :color="color" />
+    <u-icon name="attach" :size="`${size}rpx`" :color="color" v-if="text" />
   </view>
 </template>
 
 <script>
 export default {
   name: 'CopyText',
+  options: { styleIsolation: 'shared' },
   props: {
     text: { default: '', required: true },
     size: { default: 24 },
@@ -36,8 +37,9 @@ export default {
   }
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .copy_content {
+  display: inline-block;
   & ::v-deep .u-icon {
     display: inline-block !important;
   }

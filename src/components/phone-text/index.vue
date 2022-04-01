@@ -1,6 +1,6 @@
 <template>
   <view class="phone_content" @click.stop="handleCall">
-    <text :style="{ fontSize: `${size}rpx`, color: color, marginRight: `${spacing}rpx` }">
+    <text :style="{ fontSize: `${size}rpx`, color: color, marginRight: `${space}rpx` }">
       {{ setPhone }}
     </text>
     <u-icon name="phone" :size="`${size}rpx`" :color="color" v-if="phone" />
@@ -10,11 +10,12 @@
 <script>
 export default {
   name: 'PhoneText',
+  options: { styleIsolation: 'shared' },
   props: {
     phone: { default: '', required: true }, // 手机号码
     size: { default: 24 }, // 文字大小
     color: { default: '#1677FF' }, // 文字颜色
-    spacing: { default: 6 } // 文字和图标的间距
+    space: { default: 6 } // 文字和图标的间距
   },
   computed: {
     setPhone() {
@@ -47,10 +48,7 @@ export default {
 <style lang="scss" scoped>
 .phone_content {
   display: inline-block;
-  text {
-    color: red !important;
-  }
-  view {
+  & ::v-deep .u-icon {
     display: inline-block !important;
   }
 }

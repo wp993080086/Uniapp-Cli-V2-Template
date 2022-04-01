@@ -5,18 +5,23 @@
     </view>
     <view class="main">{{ title }}</view>
 
-    <view class="line">文本组件</view>
+    <view class="line">点击复制文本组件</view>
     <copyText text="测试文本" />
+
+    <view class="line">点击拨打电话组件</view>
+    <phoneText phone="18707191111" />
   </view>
 </template>
 
 <script>
 import copyText from '../../components/copy-text/index.vue'
+import phoneText from '../../components/phone-text/index.vue'
 
 export default {
   name: 'Home',
   components: {
-    copyText
+    copyText,
+    phoneText
   },
   data() {
     return {
@@ -43,8 +48,11 @@ export default {
     line-height: 100rpx;
     text-align: center;
   }
-  // & ::v-deep .u-icon{
-  //   display: inline-block !important;
-  // }
+  .line {
+    height: 50rpx;
+    line-height: 50rpx;
+    border-bottom: 2rpx solid #000000;
+    margin-top: 100rpx;
+  }
 }
 </style>

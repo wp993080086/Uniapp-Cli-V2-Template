@@ -1,7 +1,8 @@
 {
-  "name": "my-project",
-  "version": "0.1.0",
+  "name": "uniapp-cli-template",
+  "version": "1.0.0",
   "private": true,
+  "author" : "wangpeng <993080086@qq.com>",
   "scripts": {
     "serve": "npm run dev:mp-weixin",
     "build": "npm run build:mp-weixin",
