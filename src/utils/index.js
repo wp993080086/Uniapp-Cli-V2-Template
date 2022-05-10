@@ -124,7 +124,7 @@ export const deepClone = (sourceValue) => {
 // 手机号码校验
 export const validateMobile = (rule, value, callback) => {
   console.log(rule)
-  const RegExp = /^1\d{10}$/
+  const RegExp = /^1(3[0-9]|4[01456879]|5[0-35-9]|6[2567]|7[0-8]|8[0-9]|9[0-35-9])\d{8}$/
   if (value === '') {
     callback(new Error('请填写联系电话'))
   } else if (!RegExp.test(value)) {
