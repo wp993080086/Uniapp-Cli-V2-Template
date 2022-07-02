@@ -1,16 +1,16 @@
 <div align=center>
   
-![Vue](https://img.shields.io/badge/2.6.11-Vue-brightgreen)
-![Uview-ui](https://img.shields.io/badge/2.0.29-Uview--ui-orange)
-![Uni-ui](https://img.shields.io/badge/1.4.13-Uni--ui-green)
-![Eslint](https://img.shields.io/badge/7.32.0-Eslint-red)
-![Husky](https://img.shields.io/badge/7.0.2-Husky-lightgrey)
+![vue](https://img.shields.io/badge/2.6.11-vue-brightgreen)
+![uview-ui](https://img.shields.io/badge/2.0.29-uview--ui-orange)
+![uni-ui](https://img.shields.io/badge/1.4.13-uni--ui-green)
+![eslint](https://img.shields.io/badge/7.32.0-eslint-red)
+![husky](https://img.shields.io/badge/7.0.2-husky-lightgrey)
 
 </div>
 
 # ⚡️ 简介
 
-一个开箱即用的 `Vue 2` + `Uview-ui` + `Uni-ui` 的 `uniapp` 小程序（H5/App）项目模板，搭配有 `eslint` 代码检查修复，`git` 推送检查钩子 `Husky`。
+一个开箱即用，基于 `Vue 2` + `Uview-ui` + `Uni-ui` 的 `uniapp` 小程序（H5/App）项目模板。
 
 # 🚀 开发
 
