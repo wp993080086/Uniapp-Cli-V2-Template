@@ -1,9 +1,9 @@
 {
-  "name": "uniapp-cli-template",
+  "name": "uniapp-cli-v2-template",
   "version": "1.0.0",
   "private": true,
   "author": {
-    "name": "wangpeng",
+    "name": "鹏多多",
     "email": "993080086@qq.com"
   },
   "scripts": {
