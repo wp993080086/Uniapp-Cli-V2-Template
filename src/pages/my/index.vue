@@ -30,8 +30,7 @@ export default {
     height: 252rpx;
   }
   .main {
-    width: 100%;
-    height: 100rpx;
+    @include set_w_h(fill, 100);
     line-height: 100rpx;
     text-align: center;
   }

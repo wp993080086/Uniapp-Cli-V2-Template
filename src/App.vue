@@ -1,7 +1,6 @@
 <script>
 const env = __wxConfig.envVersion
 let base = ''
-console.log(`--- ${env} ---`)
 switch (env) {
   case 'develop': // 本地
     base = 'https://dev.test.com'
@@ -21,13 +20,8 @@ switch (env) {
 }
 export default {
   onLaunch() {
-    console.log(`--- ${this.globalData.baseURL} ---`)
+    console.log(`${env}：${this.globalData.baseURL}`)
     const _this = this
-    if (!this.globalData.user || !this.globalData.user.sToken) {
-      console.log('无账号，请求缓存')
-      _this.globalData.user = uni.getStorageSync('user') || {}
-      _this.globalData.userInfo = uni.getStorageSync('userInfo') || {}
-    }
     // 获取系统信息
     uni.getSystemInfo({
       success(res) {
@@ -39,7 +33,6 @@ export default {
   onHide() {},
   globalData: {
     baseURL: base,
-    user: {},
     userInfo: {},
     systemInfo: {}
   }
@@ -47,7 +40,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../src/static/style/base.css';
-@import '../src/static/style/normalize.css';
+@import '../src/static/style/reset.css';
 @import 'uview-ui/index.scss';
 </style>

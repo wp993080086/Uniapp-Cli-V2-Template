@@ -1,7 +1,11 @@
 {
 	"name": "uniapp-cli-template",
 	"appid": "",
-	"author" : "wangpeng <993080086@qq.com>",
+	"author": {
+    "name": "鹏多多",
+    "email": "993080086@qq.com",
+    "url": "https://github.com/wp993080086"
+  },
 	"description": "uniapp-cli-template",
 	"versionName": "1.0.0",
 	"versionCode": "100",
@@ -55,7 +59,7 @@
 
 	},
 	"mp-weixin": { /* 微信小程序特有相关 */
-		"appid": "",
+		"appid": "wx8a69e474ba11516b",
 		"setting": {
 			"urlCheck": false,
 			"postcss" : true,
